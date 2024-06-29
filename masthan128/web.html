@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Shop</title>
+    <link rel="stylesheet" href="web.css">
+    <script src="web.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#" onclick="toggleMenu('home')">Home</a></li>
+                <li><a href="#" onclick="toggleMenu('bikes')">Bikes</a></li>
+                <li><a href="#" onclick="toggleMenu('contact')">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="menu-item active">
+            <h1>Welcome to Our Bike Shop</h1>
+            <img src="images/bike-shop.jpg" alt="Bike Shop" class="responsive-img">
+            <p>Your one-stop shop for all your biking needs!</p>
+        </section>
+
+        <section id="bikes" class="menu-item">
+            <h1>Our Bikes</h1>
+            <div class="bike-list">
+                <div class="bike">
+                    <img src="road.webp" alt="Road Bike" class="responsive-img">
+                    <h2>Road Bike</h2>
+                    <p>Price: $1000</p>
+                </div>
+                <div class="bike">
+                    <img src="mountain.jpg" alt="Mountain Bike" class="responsive-img">
+                    <h2>Mountain Bike</h2>
+                    <p>Price: $1200</p>
+                </div>
+                <div class="bike">
+                    <img src="ebike.jpg" alt="E-Bike" class="responsive-img">
+                    <h2>E-Bike</h2>
+                    <p>Price: $1500</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="menu-item">
+            <h1>Contact Us</h1>
+            <form name="contactForm" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email"><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bike Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
